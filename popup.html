@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Window resizer</title>
+    <style>
+      body {
+        background-color: #18181b;
+        color: #fafafa;
+        width: 200px;
+        height: 525px;
+        padding: 10px;
+        border-radius: 24px;
+      }
+      input {
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: none;
+        border: 1px solid #3f3f46;
+        background-color: transparent;
+        color: #fff;
+      }
+      button {
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 0px;
+        color: #a1a1aa;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .flex-row {
+        display: grid;
+        grid-column: 2;
+        flex-direction: row;
+        gap: 6px;
+        max-width: 200px;
+        overflow: hidden;
+      }
+      .flex-row input {
+        flex: 1 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <h1>Custom dimensions</h1>
+      <input type="number" id="width" placeholder="Width in px" />
+      <input type="number" id="height" placeholder="Height in px" />
+      <button id="custom">Update</button>
+    </div>
+    <div class="flex">
+      <h1>Desktop</h1>
+      <button id="resize1920">1920 x 1080</button>
+      <button id="resize1366">1366 x 768</button>
+      <button id="resize1280">1280 x 1024</button>
+      <button id="resize1024">1024 x 768</button>
+    </div>
+    <div class="flex">
+      <h1>Mobile</h1>
+      <button id="resizeiphone14">iPhone 14: 390 x 844</button>
+      <button id="resizeiphone15">iPhone 14: 393 x 852</button>
+      <button id="resizeiphone11xr">iPhone 11/XR: 414 x 896</button>
+      <button id="resize414">Android: 414 x 736</button>
+      <button id="resize360">Android: 360 x 800</button>
+      <button id="resize390">Android: 390 x 844</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
